@@ -1,3 +1,6 @@
 [user]
 	name = Jajauma's GitHub
 	email = jajauma@2ch.hk
+
+[pull]
+	ff = only
