@@ -1,1 +1,1 @@
-/ssh/** filter=crypt diff=crypt merge=crypt
+/ssh/target/** filter=crypt diff=crypt merge=crypt
