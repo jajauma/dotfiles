@@ -1,1 +1,18 @@
-echom "Testing custom vimrc"
+if &compatible
+  set nocompatible
+endif
+
+if &t_Co > 2 || has("gui_running")
+  syntax on
+endif
+
+if has("gui_running")
+  set guifont=Iosevka_SS08_Semibold:h12:W500
+  set guioptions-=T
+  set guioptions-=r
+  set guioptions-=L
+  set guioptions-=m
+  set guioptions+=!
+endif
+
+filetype plugin indent on
