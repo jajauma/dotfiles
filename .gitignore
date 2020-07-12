@@ -1,2 +1,3 @@
 ssh/target/authorized_keys
 ssh/target/known_hosts
+vim/target/.netrwhist
