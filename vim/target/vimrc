@@ -2,11 +2,17 @@ if &compatible
     set nocompatible
 endif
 
-if &t_Co > 2 || has("gui_running")
+let s:vimfiles_path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
+let s:plugged_path = glob(s:vimfiles_path . '/plugged')
+call plug#begin(s:plugged_path)
+Plug 'https://tpope.io/vim/commentary.git'
+call plug#end()
+
+if &t_Co > 2 || has('gui_running')
     syntax on
 endif
 
-if has("gui_running")
+if has('gui_running')
     set guifont=Iosevka_SS08_Semibold:h12:W500
     set guioptions-=T
     set guioptions-=r
@@ -33,7 +39,7 @@ set fileformats=unix,dos
 set list
 set listchars=tab:»\ ,trail:·
 set visualbell t_vb=
-if has("autocmd") && has("gui_running")
+if has('autocmd') && has('gui_running')
       autocmd GUIEnter * set t_vb=
 endif
 
