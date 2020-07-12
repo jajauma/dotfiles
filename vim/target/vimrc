@@ -1,0 +1,46 @@
+if &compatible
+    set nocompatible
+endif
+
+if &t_Co > 2 || has("gui_running")
+    syntax on
+endif
+
+if has("gui_running")
+    set guifont=Iosevka_SS08_Semibold:h12:W500
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=L
+    set guioptions-=m
+    set guioptions+=!
+endif
+
+filetype plugin indent on
+set autoindent
+set formatoptions=tcqj
+set history=10000
+set hlsearch
+set incsearch
+set laststatus=2
+set ttyfast
+set expandtab shiftwidth=4
+set nowrapscan
+set relativenumber
+set showcmd
+set statusline=%<%n\ %F\ %y%m%r%=%-14.(%l,%c%V%)\ %P
+set encoding=utf8
+set fileformats=unix,dos
+set list
+set listchars=tab:»\ ,trail:·
+set visualbell t_vb=
+if has("autocmd") && has("gui_running")
+      autocmd GUIEnter * set t_vb=
+endif
+
+" reset search highlight
+nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
+" saner search (n always jumps forward, N always jump backwards)
+nnoremap <expr> n 'Nn'[v:searchforward]
+nnoremap <expr> N 'nN'[v:searchforward]
+" quick save
+nnoremap <silent> <F2> :update<CR>
