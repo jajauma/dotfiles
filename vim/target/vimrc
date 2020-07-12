@@ -16,3 +16,14 @@ if has("gui_running")
 endif
 
 filetype plugin indent on
+set autoindent
+set formatoptions=tcqj
+set history=10000
+set hlsearch
+set incsearch
+set laststatus=2
+set ttyfast
+set visualbell t_vb=
+if has("autocmd") && has("gui_running")
+    au GUIEnter * set t_vb=
+endif
