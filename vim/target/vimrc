@@ -13,7 +13,11 @@ if &t_Co > 2 || has('gui_running')
 endif
 
 if has('gui_running')
-    set guifont=Iosevka_SS08_Semibold:h12:W500
+    if has("win32")
+        set guifont=Iosevka_SS08_Semibold:h12:W500
+    else
+        set guifont=Iosevka\ Fixed\ SS08\ Semi-Bold\ 12
+    endif
     set guioptions-=T
     set guioptions-=r
     set guioptions-=L
