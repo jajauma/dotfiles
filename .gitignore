@@ -1,4 +1,5 @@
 ssh/target/authorized_keys
 ssh/target/known_hosts
 vim/target/.netrwhist
-vim/target/plugged/
+vim/target/plugged/**
+!vim/target/plugged/README.md
