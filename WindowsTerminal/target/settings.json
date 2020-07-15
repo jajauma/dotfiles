@@ -5,6 +5,7 @@
   "wordDelimiters": " ",
   "profiles": {
     "defaults": {
+      "cursorShape": "filledBox",
       "fontFace": "Iosevka SS08",
       "fontSize": 11,
       "antialiasingMode": "cleartype",
