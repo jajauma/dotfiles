@@ -2,5 +2,8 @@
 	name = Jajauma's GitHub
 	email = jajauma@2ch.hk
 
+[core]
+	editor = vim
+
 [pull]
 	ff = only
