@@ -6,7 +6,7 @@ let s:vimfiles_path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
 " Relocate state files to persistent directory
 let s:tmp_path = glob(s:vimfiles_path . '/tmp')
-let &viminfofile = s:tmp_path . '/viminfo'
+let &viminfo .= ',n' . s:tmp_path . '/viminfo'
 let &directory = s:tmp_path . '//'
 
 " Initialize automatically managed plugins
