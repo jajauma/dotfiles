@@ -68,3 +68,6 @@ nnoremap <expr> n 'Nn'[v:searchforward]
 nnoremap <expr> N 'nN'[v:searchforward]
 " quick save
 nnoremap <silent> <F2> :update<CR>
+" quickfix navigation
+nnoremap <F7> :cprevious<CR>
+nnoremap <F8> :cnext<CR>
