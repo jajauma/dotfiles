@@ -14,6 +14,7 @@ let s:plugged_path = glob(s:vimfiles_path . '/plugged')
 call plug#begin(s:plugged_path)
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'PProvost/vim-ps1'
+Plug 'vim-scripts/Rename'
 call plug#end()
 
 if &t_Co > 2 || has('gui_running')
